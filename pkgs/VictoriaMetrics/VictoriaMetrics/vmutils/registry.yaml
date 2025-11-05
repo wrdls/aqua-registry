@@ -8,6 +8,8 @@ packages:
     files:
       - name: vmalert-tool
         src: vmalert-tool-prod
+      - name: vmalert
+        src: vmalert-prod
     version_filter: semver("> 1.78.1") and not (Version endsWith "-victorialogs") and (Version endsWith ".0")
     version_constraint: "false"
     version_overrides:
@@ -35,3 +37,5 @@ packages:
             files:
               - name: vmalert-tool
                 src: vmalert-tool-windows-{{.Arch}}-prod.exe
+              - name: vmalert
+                src: vmalert-windows-{{.Arch}}-prod.exe
